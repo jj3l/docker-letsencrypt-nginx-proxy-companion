@@ -86,6 +86,8 @@ function nginx_proxy_container {
 reload_nginx() {
     local _docker_gen_container=$(docker_gen_container)
     local _nginx_proxy_container=$(nginx_proxy_container)
+    echo "DEBUG _docker_gen_container=${_docker_gen_container}"
+    echo "DEBUG _nginx_proxy_container=${_nginx_proxy_container}"
 
     if [[ -n "${_docker_gen_container:-}" ]]; then
         # Using docker-gen and nginx in separate container
