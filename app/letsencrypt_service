@@ -150,7 +150,8 @@ update_certs() {
             $params_d_str \
             --cert_key_size=$cert_keysize \
             --server=$acme_ca_uri \
-            --default_root /usr/share/nginx/html/
+            --default_root /usr/share/nginx/html/ \
+            --verbose
 
         simp_le_return=$?
 
